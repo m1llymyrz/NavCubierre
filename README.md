@@ -14,7 +14,9 @@ Typically when objects move at relativistic speeds (i.e. at or near the speed of
 In order to find the optimized fuel path, the euler-lagrange equation was used to give us equations of motion for the spacecraft, then these equations were approximated using 4th order runge-kutta. The inputs from the python code are transfered to the fortran code, where the euler-lagrange equation was approximated, then solved for time.
 
 # Required Packages and Data
-Fortran and python capabilities are required for this software. 
+Fortran and python capabilities are required for this software. NavCubierre also uses the HYG database as the list of navigable stars. The HYG database is a collection of the Hipparcos catalog, the Yale bright star catalog, and the Gliese Catalog of nearby stars. The HYG database can be downloaded from this link below. 
+https://www.astronexus.com/projects/hyg
+NavCubierre utilizes the 2024 database containing over 120,000 stars. For this project, NavCubierre utilizes the names and the distance (from the Earth) of the star. A csv file from the website is required for this software to run. Download this file seperatley and move it into the same folder as your main NavCubierre code and fortran code. Downloading the 2024 version is reccommended. 
 
 ## Fotran installation:
 To install fortran, in the terminal execute the command:
@@ -30,15 +32,13 @@ Or if you have an environment set up:
 
 Note that to install kniter, the package name is tk. 
 
-A csv file from the website https://www.astronexus.com/projects/hyg is also required for this software to run. Download this file seperatley and move it into the same folder as your main NavCubierre code and fortran code. Downloading the 2024 version is reccommended. 
-
 # Installation
 Download the entire NavCubierre folder and move this folder into your desired local repository. You'll then need to compile the fortran code and make the python code executeable. A large datafile is required for this software to run. It is available at https://www.astronexus.com/projects/hyg where it's reccommended to download the 2024 file version. 
 
 In order for this code to run, the downloaded data file must be in the same repository as your other code. 
 
 # Test Case
-     ![Screenshot 2025-05-09 151034.png](C:\Users\ameli\Downloads\Screenshot 2025-05-09 151034.png)
+A screenshot of a test case is included within the repository. Once you have NavCubierre running, use Rigel as an origin star and EZ Aqr as the destination star. You should be able to type into the menus the names of these stars, then press your down arrow key to select them. Once the destination star is selected, the distance will be displayed. When you calculate this tst case, you should see a similar plot to the one in the testcase screenshot. 
 
 # Troubleshooting
-
+The HYG data
