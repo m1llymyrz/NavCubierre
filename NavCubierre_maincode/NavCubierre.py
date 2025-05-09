@@ -12,6 +12,7 @@ import subprocess, sys, os
 def load_star_data(filename="hygdata_v41.csv"):
     star_data = {}
     data = np.loadtxt(filename, dtype=str, delimiter=',', skiprows=1, usecols=(6, 17, 18, 19, 15)) #using coloumn 15 to graph real star colors was an afterthought
+    # load in the star name, spectral type, x, y, and z coordinate
     for row in data:
         name = row[0].strip()
         x = float(row[1].strip())
@@ -60,7 +61,7 @@ class NavCubierreGUI(tk.Tk):
         self.lift()
         self.fortran_executable = "./runge_fuel.exe" # fortran executable set here
         self.stop_flag = False
-        self.path_line = None  # To store the plotted path
+        self.path_line = None
 
     def background_lines(self): # Used to make the grid pattern in the background
         line_color = "#e67e22"
@@ -70,7 +71,6 @@ class NavCubierreGUI(tk.Tk):
         for i in range(0, 800, spacing):
             self.bg_canvas.create_line(i, 0, i, 1000, fill=line_color)
 
-# Creates dropdown widget and results display widget.
     def create_widgets(self):
 # Input Frame where users can access the combobox:
         input_frame = tk.Frame(self.bg_canvas, bg="#650c00", bd=2, relief="groove")
@@ -229,11 +229,7 @@ class NavCubierreGUI(tk.Tk):
             self.star_points[destination_name].set_data(np.array([destination_data['x']]), np.array([destination_data['y']]))
             self.star_points[destination_name].set_3d_properties(np.array([destination_data['z']]))
 # Plot the flightpath
-        if self.path_line: # Check if a line object exists
-            self.path_line.set_data(x, y)
-            self.path_line.set_3d_properties(z)
-        else:
-            self.path_line, = self.ax.plot(x, y, z, 'r-', lw=2)
+        self.path_line, = self.ax.plot(x, y, z, 'r-', lw=2)
         self.ax.legend()
         self.canvas.draw()
 
