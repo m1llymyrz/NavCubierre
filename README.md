@@ -15,20 +15,30 @@ In order to find the optimized fuel path, the euler-lagrange equation was used t
 
 # Required Packages and Data
 Fortran and python capabilities are required for this software. NavCubierre also uses the HYG database as the list of navigable stars. The HYG database is a collection of the Hipparcos catalog, the Yale bright star catalog, and the Gliese Catalog of nearby stars. The HYG database can be downloaded from this link below. 
+
+
 https://www.astronexus.com/projects/hyg
+
+
 NavCubierre utilizes the 2024 database containing over 120,000 stars. For this project, NavCubierre utilizes the names and the distance (from the Earth) of the star. A csv file from the website is required for this software to run. Download this file seperatley and move it into the same folder as your main NavCubierre code and fortran code. Downloading the 2024 version is reccommended. 
 
 ## Fotran installation:
 To install fortran, in the terminal execute the command:
+
   sudo apt-get install gfortran
 
 ## Required Python3 packages
 This code was written using python3.12. It has not been tested on a python interface that is not python3. This code requires the python packages numpy, matplotlib, ktinter, mpl_toolkits.mplot3d, and matplotlib.backends.backend_tkag. Most of these come standard with a regular python3 download, but in case you need install these packaged, execute the following commands.
 
+
 If you do not have an enviroment set up:
+
   sudo apt/get install python3-<package_name>
+  
 Or if you have an environment set up:
+
   pip install python3-<package_name>
+
 
 Note that to install kniter, the package name is tk. 
 
