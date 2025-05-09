@@ -12,6 +12,8 @@ There were a few key assumptions made with this project that impact the real-wor
 Alcubierre drives work by creating a "space-time bubble" around the spacecraft. This bubble warps the fabric of space-time in front of the ship down, and warps the space-time fabric behind the ship up. This method makes a "space-time wave" that the ship can ride on, and allows the ship to travel faster than the speed of light. 
 Typically when objects move at relativistic speeds (i.e. at or near the speed of light), time is dilated. Time moves slower for people moving at a relativistic speed, rather than for someone not moving at a relativistic speed. Since NavCubierre shows users a time optimized path, dilated time was neglected for this travel time.
 
+For this code, it's assumed that this warp drive can travel at a maximum speed of 100c, with a max acceleration at 10c. 
+
 
 ### Base Mathematics
 In order to find the optimized fuel path, the euler-lagrange equation was used to give us equations of motion for the spacecraft, then these equations were approximated using 4th order runge-kutta. The inputs from the python code are transfered to the fortran code, where the euler-lagrange equation was approximated, then solved for time.
