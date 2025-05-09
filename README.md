@@ -24,7 +24,7 @@ Fortran and python capabilities are required for this software. NavCubierre also
 https://www.astronexus.com/projects/hyg
 
 
-NavCubierre utilizes the 2024 database containing over 120,000 stars. For this project, NavCubierre utilizes the names and the distance (from the Earth) of the star. A csv file from the website is required for this software to run. Download this file seperatley and move it into the same folder as your main NavCubierre code and fortran code. Downloading the 2024 version is reccommended. 
+NavCubierre utilizes the 2024 database containing over 120,000 stars. For this project, NavCubierre utilizes the names and the distance (from the Earth) of the star. A csv file from the website is required for this software to run. Download this file seperatley and move it into the same folder as your main NavCubierre code and fortran code. Downloading the 2024 version is reccommended. Due to the large size of this csv file, I am unable to upload it to Github, which is why I encourage you to download the data yourself. 
 
 ## Fotran installation:
 To install fortran, in the terminal execute the command:
