@@ -38,7 +38,7 @@ Download the entire NavCubierre folder and move this folder into your desired lo
 In order for this code to run, the downloaded data file must be in the same repository as your other code. 
 
 # Test Case
-     ![alt text](C:\Users\ameli\Downloads\Screenshot 2025-05-09 151034.png)
+     ![Screenshot 2025-05-09 151034.png](C:\Users\ameli\Downloads\Screenshot 2025-05-09 151034.png)
 
 # Troubleshooting
 
